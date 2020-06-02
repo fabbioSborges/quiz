@@ -14,7 +14,7 @@ if uploaded_file is not None:
 
   df = df.drop(columns=['Número de identificação', 'Sobrenome','Instituição', 'Departamento', 'Endereço de email', 'Último download realizado neste curso.'])
   df = df.set_index('Nome')
-  df = df.replace('-',0.0)
+  df = df.replace('-',float('NaN'))
 
   [lin, col] = df.shape
 
